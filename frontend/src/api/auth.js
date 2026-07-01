@@ -1,0 +1,15 @@
+import axios from "axios"
+
+const API = axios.create({
+    baseURL : "http://127.0.0.1:8000/auth",
+});
+
+export const registeruser = (data)=>{
+    return API.post("/register/",data);
+}
+
+export const loginuser = (data)=>{
+    return API.post("/login/",data);
+}
+
+
