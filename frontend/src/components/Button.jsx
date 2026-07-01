@@ -4,15 +4,30 @@ import { COLORS } from "../constants/colors";
 function Button(props) {
   const [hovered, setHovered] = useState(false);
 
-  const baseColor = props.variant === "primary" ? COLORS.primary : COLORS.accent;
-  const hoverColor = props.variant === "primary" ? COLORS.primaryHover : COLORS.accentHover;
+  const variants = {
+  primary: {
+    base: COLORS.primary,
+    hover: COLORS.primaryHover,
+  },
+  accent: {
+    base: COLORS.accent,
+    hover: COLORS.accentHover,
+  },
+  explore: {
+    base: COLORS.explore,
+    hover: COLORS.exploreHover,
+  },
+};
 
+const baseColor = variants[props.variant]?.base || COLORS.primary;
+const hoverColor = variants[props.variant]?.hover || COLORS.primaryHover;
+  
   const styles = {
     backgroundColor: hovered ? hoverColor : baseColor,
     color: "#FFFFFF",
     border: "none",
     padding: "14px 24px",
-    borderRadius: "10px",
+    borderRadius: "10px", 
     cursor: "pointer",
     fontSize: "16px",
     fontWeight: "600",

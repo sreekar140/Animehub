@@ -167,7 +167,7 @@ function Landing() {
 >
   {isLoggedIn ? (
     <div style={{ width: "160px" }}>
-      <Button variant="primary">
+      <Button variant="explore">
         Explore
       </Button>
     </div>

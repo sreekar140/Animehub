@@ -22,7 +22,9 @@ export const COLORS = {
   // Status
   success: "#16A34A",
   danger: "#EF4444",
-
+  
+  explore: "#06B6D4",
+  exploreHover: "#0891B2",
   // Split-screen panel gradients (login = green, signup = purple)
   loginPanelGradient: "linear-gradient(160deg, #134E2A 0%, #1F7A45 45%, #4ADE80 100%)",
   signupPanelGradient: "linear-gradient(160deg, #3B1F6B 0%, #5B33A6 45%, #8B5CF6 100%)",
